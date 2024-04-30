@@ -31,10 +31,10 @@ export default function Main() {
           <h2 className="mb-8">Hoje</h2>
           <InputTask />
 
-          <div>
+          <div className="flex flex-col w-full">
             <h3>Para Fazer</h3>
-            <ul className="flex">
-              <li>
+            <ul className="flex w-full">
+              <li className="w-full">
                 <ListItem
                   category="Categoria"
                   dateToDo="13 Set. 23"
