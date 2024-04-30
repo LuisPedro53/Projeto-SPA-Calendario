@@ -1,6 +1,8 @@
 import { MainMenu } from "@/Components/Menu/MainMenu";
 import { SecondaryMenu } from "@/Components/Menu/SecondaryMenu";
-import { Sidebar } from "@/Components/Sidebar/Sidebar";
+import { Sidebar } from "@/Components/Sidebar/sidebar";
+import { InputTask } from "@/Components/Task/InputTask";
+import { ListItem } from "@/Components/Task/ListItem";
 
 export default function Main() {
   return (
@@ -25,7 +27,25 @@ export default function Main() {
           </div>
         </Sidebar>
 
-        <div className="p-7">Tarefas</div>
+        <div className="p-7 w-full">
+          <h2 className="mb-8">Hoje</h2>
+          <InputTask />
+
+          <div>
+            <h3>Para Fazer</h3>
+            <ul className="flex">
+              <li>
+                <ListItem
+                  category="Categoria"
+                  dateToDo="13 Set. 23"
+                  isDone={false}
+                >
+                  Publicar o novo Layout nos grupos do Whats para alunos
+                </ListItem>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </main>
   );
