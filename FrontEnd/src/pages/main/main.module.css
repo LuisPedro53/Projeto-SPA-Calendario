@@ -1,7 +1,0 @@
-.main {
-  @apply p-7;
-}
-
-.containerApp {
-  @apply mx-auto bg-white rounded-xl flex shadow-md overflow-hidden;
-}

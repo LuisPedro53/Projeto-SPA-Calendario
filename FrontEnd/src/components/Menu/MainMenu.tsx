@@ -1,19 +1,13 @@
-import MenuItem from "./MenuItem";
+import { ItemMenu } from "./ItemMenu";
 
-export default function MainMenu() {
+export function MainMenu() {
   return (
     <div>
-      <MenuItem icon="hoje" counter={2}>
-        Hoje
-      </MenuItem>
-
-      <MenuItem icon="amanha" counter={2}>
-        Amanhã
-      </MenuItem>
-
-      <MenuItem icon="7dias" counter={2}>
-        7 Dias
-      </MenuItem>
+      <div className="grid gap-3">
+        <ItemMenu counter={3}>Hoje</ItemMenu>
+        <ItemMenu counter={2}>Amanhã</ItemMenu>
+        <ItemMenu counter={5}>Próximos 7 dias</ItemMenu>
+      </div>
     </div>
   );
 }
