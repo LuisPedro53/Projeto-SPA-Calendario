@@ -1,8 +1,10 @@
+import { Icon } from "@/Components/Icon";
 import { MainMenu } from "@/Components/Menu/MainMenu";
 import { SecondaryMenu } from "@/Components/Menu/SecondaryMenu";
 import { Sidebar } from "@/Components/Sidebar/sidebar";
-import { InputTask } from "@/Components/Task/InputTask";
-import { ListItem } from "@/Components/Task/ListItem";
+import { TaskInput } from "@/Components/Task/TaskInput";
+import { Task } from "@/Components/Task/Task";
+import { Title } from "@/Components/Title/Title";
 import { User } from "@/Components/User/User";
 
 export default function Main() {
@@ -25,21 +27,20 @@ export default function Main() {
           </div>
         </Sidebar>
 
-        <div className="p-7 w-full">
-          <h2 className="mb-8">Hoje</h2>
-          <InputTask />
+        <div className="p-7 flex flex-col w-full gap-y-[30px]">
+          <div className="flex gap-x-[10px]">
+            <Icon icon="List" />
+            <Title heading="Title">Hoje</Title>
+          </div>
+          <TaskInput />
 
           <div className="flex flex-col w-full">
-            <h3>Para Fazer</h3>
+            <Title heading="SmallTitle">Para Fazer</Title>
             <ul className="flex w-full">
               <li className="w-full">
-                <ListItem
-                  category="Categoria"
-                  dateToDo="13 Set. 23"
-                  isDone={false}
-                >
+                <Task category="Categoria" dateToDo="13 Set. 23" isDone={false}>
                   Publicar o novo Layout nos grupos do Whats para alunos
-                </ListItem>
+                </Task>
               </li>
             </ul>
           </div>
