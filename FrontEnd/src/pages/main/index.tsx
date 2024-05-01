@@ -3,6 +3,7 @@ import { SecondaryMenu } from "@/Components/Menu/SecondaryMenu";
 import { Sidebar } from "@/Components/Sidebar/sidebar";
 import { InputTask } from "@/Components/Task/InputTask";
 import { ListItem } from "@/Components/Task/ListItem";
+import { User } from "@/Components/User/User";
 
 export default function Main() {
   return (
@@ -20,10 +21,7 @@ export default function Main() {
               <SecondaryMenu />
             </div>
 
-            <div className="flex items-center">
-              <span className="w-16 h-16 bg-neutral-50 border-4 border-emerald-400 rounded-full mr-4"></span>
-              <p className="text-[#56577E] font-bold text-cl">Bia Silva</p>
-            </div>
+            <User />
           </div>
         </Sidebar>
 
