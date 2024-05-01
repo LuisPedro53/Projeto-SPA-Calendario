@@ -6,6 +6,7 @@ import { TaskInput } from "@/Components/Task/TaskInput";
 import { Task } from "@/Components/Task/Task";
 import { Title } from "@/Components/Title/Title";
 import { User } from "@/Components/User/User";
+import { TaskList } from "@/Components/Task/TaskList";
 
 export default function Main() {
   return (
@@ -36,13 +37,7 @@ export default function Main() {
 
           <div className="flex flex-col w-full">
             <Title heading="SmallTitle">Para Fazer</Title>
-            <ul className="flex w-full">
-              <li className="w-full">
-                <Task category="Categoria" dateToDo="13 Set. 23" isDone={false}>
-                  Publicar o novo Layout nos grupos do Whats para alunos
-                </Task>
-              </li>
-            </ul>
+            <TaskList />
           </div>
         </div>
       </div>
